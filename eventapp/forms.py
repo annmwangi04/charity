@@ -14,8 +14,8 @@ class BookingForm(forms.ModelForm):
         }
 
         labels = {
-            'cus_name': "Customer Name:", 
-            'cus_ph': "Customer Phone",    
+            'cus_name': " Name:", 
+            'cus_ph': "Phone",    
             'name': "Charity Name",
             'booking_date': "Booking Date",
         }

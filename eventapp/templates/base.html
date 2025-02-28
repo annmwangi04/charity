@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'event_app/main.css' %}">
     <title>{% block title %}Charity Foundation{% endblock %}</title>
     <style>
-                .navbar-brand{
+        .navbar-brand{
             font-size: 25px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
@@ -57,10 +57,10 @@
                                 </ul>
                             </div>
                         {% else %}
-                            <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <a href="/login/" class="btn btn-outline-primary me-2">
                                 <i class="bi bi-box-arrow-in-right me-1"></i>Login
                             </a>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            <a href="/register/" class="btn btn-primary">
                                 <i class="bi bi-person-plus me-1"></i>Sign Up
                             </a>
                         {% endif %}
@@ -69,75 +69,6 @@
             </div>
         </nav>
     </header>
-
-    
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="/login/">
-                        {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Login</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <p class="mb-0">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Sign up here</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Create an Account</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="/register/">
-                        {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="reg_username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="reg_username" name="username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="reg_password1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="reg_password1" name="password1" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="reg_password2" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="reg_password2" name="password2" required>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <p class="mb-0">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login here</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="container mt-5">
         {% if messages %}
@@ -173,9 +104,9 @@
                     </div>
                     <div class="card-body">
                         <p>Sign up to receive updates about our work and upcoming events.</p>
-                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#registerModal">Sign Up Now</button>
+                        <a href="/register/" class="btn btn-primary w-100">Sign Up Now</a>
                         <hr>
-                        <p class="mb-0 text-center">Already a member? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login here</a></p>
+                        <p class="mb-0 text-center">Already a member? <a href="/login/">Login here</a></p>
                     </div>
                 </div>
                 {% endif %}

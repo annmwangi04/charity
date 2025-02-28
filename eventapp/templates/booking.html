@@ -1,22 +1,79 @@
 {% extends "base.html" %}
 
 {% block titles %}
-    <h1>Booking</h1>
-
+  <h2 class="page-title">Booking</h2>
 {% endblock %}
 
 {% block content %}
-<form action="" method="POST">
+  <div class="booking-container">
+    <form method="post" class="booking-form">
+      {% csrf_token %}
+      <div class="form-fields">
+        {{ form.as_p }}
+      </div>
+      <button type="submit" class="booking-button">Book Now</button>
+    </form>
+  </div>
 
-    {% csrf_token %}
-
-    {{form.as_p}}
-    <button class="btn">Book Now</button>
-
-</form>
-   
+  <style>
+    .booking-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    
+    .page-title {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-fields {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-fields p {
+      margin-bottom: 1rem;
+    }
+    
+    .form-fields label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #34495e;
+    }
+    
+    .form-fields input, .form-fields select, .form-fields textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    
+    .booking-button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-self: center;
+    }
+    
+    .booking-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
 {% endblock %}
-
-
-
-
