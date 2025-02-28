@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Charity Foundation{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+            <h1 class="mb-4">About Our Foundation</h1>
+            <p class="lead">Founded in 2010, our charity foundation has been dedicated to making a positive impact in communities around the world through sustainable development, education, and humanitarian aid.</p>
+            <p>We believe that every person deserves access to basic necessities, quality education, and opportunities to thrive. Our mission is to bridge gaps, empower communities, and create lasting change.</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="{% static 'images/about-hero.jpg' %}" alt="Charity foundation volunteers" class="img-fluid rounded shadow">
+        </div>
+    </div>
+    
+    
+    <div class="bg-light p-4 p-md-5 rounded shadow-sm mb-5">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h2 class="text-primary">Our Mission</h2>
+            </div>
+            <div class="col-md-8">
+                <p>To empower communities through sustainable programs that address immediate needs while creating pathways to self-sufficiency.</p>
+                <p>We work closely with local partners to develop initiatives that respect cultural contexts and leverage local knowledge and resources. By fostering collaboration, we ensure that our programs have lasting impact and truly address the needs of the communities we serve.</p>
+            </div>
+        </div>
+    </div>
+    
+   
+    <div class="bg-light p-4 p-md-5 rounded shadow-sm mb-5">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h2 class="text-primary">Our Vision</h2>
+            </div>
+            <div class="col-md-8">
+                <p>A world where all communities have the resources, knowledge, and support they need to thrive and prosper.</p>
+                <p>We envision a future where poverty is eliminated, education is accessible to all, and communities are resilient in the face of challenges. We believe in building bridges of understanding and cooperation across cultures and borders.</p>
+            </div>
+        </div>
+    </div>
+    
+  
+    <h2 class="mb-4">Our Core Values</h2>
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-heart-fill text-danger fs-1 mb-3"></i>
+                    <h3 class="card-title">Compassion</h3>
+                    <p class="card-text">We approach our work with empathy and a deep respect for human dignity, recognizing the inherent worth of every individual.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-lightbulb-fill text-warning fs-1 mb-3"></i>
+                    <h3 class="card-title">Innovation</h3>
+                    <p class="card-text">We constantly seek creative solutions to complex problems, embracing new ideas and approaches to maximize our impact.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-shield-fill-check text-success fs-1 mb-3"></i>
+                    <h3 class="card-title">Integrity</h3>
+                    <p class="card-text">We operate with transparency and accountability, ensuring that our actions align with our words and that resources are used effectively.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    <h2 class="mb-4">Our Leadership Team</h2>
+    <div class="row mb-5">
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'images/team-1.jpg' %}" class="card-img-top" alt="Team member">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-1">Sarah Johnson</h5>
+                    <p class="text-muted small">Executive Director</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team member">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-1">Michael Chen</h5>
+                    <p class="text-muted small">Operations Director</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'images/team-3.jpg' %}" class="card-img-top" alt="Team member">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-1">Amina Patel</h5>
+                    <p class="text-muted small">Program Manager</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'images/team-4.jpg' %}" class="card-img-top" alt="Team member">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-1">David Wilson</h5>
+                    <p class="text-muted small">Financial Director</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    <h2 class="mb-4">Our Impact</h2>
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4 text-center">
+            <div class="display-4 fw-bold text-primary">50+</div>
+            <p class="lead">Projects Completed</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+            <div class="display-4 fw-bold text-primary">25k+</div>
+            <p class="lead">Lives Impacted</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+            <div class="display-4 fw-bold text-primary">20+</div>
+            <p class="lead">Countries Reached</p>
+        </div>
+    </div>
+    
+   
+    <div class="bg-primary text-white p-5 rounded text-center mb-5">
+        <h2 class="mb-3">Join Us in Making a Difference</h2>
+        <p class="lead mb-4">Whether through donations, volunteering, or partnerships, there are many ways to support our mission.</p>
+        <a href="{% url 'donate' %}" class="btn btn-light btn-lg me-2 mb-2">Donate Now</a>
+        <a href="{% url 'volunteer' %}" class="btn btn-outline-light btn-lg mb-2">Become a Volunteer</a>
+    </div>
+    
+   
+    <h2 class="mb-4">Our Journey</h2>
+    <div class="position-relative mb-5">
+        <div class="position-absolute h-100" style="width: 2px; background-color: #dee2e6; left: 50%; transform: translateX(-50%);"></div>
+        
+        <div class="row mb-4">
+            <div class="col-md-5 text-md-end pe-md-5">
+                <div class="bg-light p-3 rounded shadow-sm">
+                    <h5>2010</h5>
+                    <p class="mb-0">Foundation established with focus on education in underserved communities</p>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; z-index: 1;">
+                    <i class="bi bi-flag-fill"></i>
+                </div>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+        
+        <div class="row mb-4">
+            <div class="col-md-5"></div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; z-index: 1;">
+                    <i class="bi bi-book-fill"></i>
+                </div>
+            </div>
+            <div class="col-md-5 ps-md-5">
+                <div class="bg-light p-3 rounded shadow-sm">
+                    <h5>2013</h5>
+                    <p class="mb-0">Expanded to include healthcare and clean water initiatives</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-4">
+            <div class="col-md-5 text-md-end pe-md-5">
+                <div class="bg-light p-3 rounded shadow-sm">
+                    <h5>2016</h5>
+                    <p class="mb-0">Launched disaster relief program responding to natural disasters worldwide</p>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; z-index: 1;">
+                    <i class="bi bi-house-fill"></i>
+                </div>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+        
+        <div class="row mb-4">
+            <div class="col-md-5"></div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; z-index: 1;">
+                    <i class="bi bi-globe"></i>
+                </div>
+            </div>
+            <div class="col-md-5 ps-md-5">
+                <div class="bg-light p-3 rounded shadow-sm">
+                    <h5>2020</h5>
+                    <p class="mb-0">Reached milestone of operating in 20 countries across 5 continents</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-5 text-md-end pe-md-5">
+                <div class="bg-light p-3 rounded shadow-sm">
+                    <h5>2025</h5>
+                    <p class="mb-0">Continuing to expand our impact with new innovative programs and partnerships</p>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; z-index: 1;">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

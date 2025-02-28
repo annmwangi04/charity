@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titles %}
+    <h1>Booking</h1>
+
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <button class="btn">Book Now</button>
+
+</form>
+   
+{% endblock %}
+
+
+
+
