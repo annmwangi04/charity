@@ -5,6 +5,8 @@ from django.contrib import messages
 from django.utils import timezone
 import requests
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def index(request):
@@ -19,6 +21,7 @@ def events(request):
     }
     return render(request, 'events.html', dict__eve)
 
+@login_required
 def booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
